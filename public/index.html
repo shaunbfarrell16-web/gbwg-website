@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Great British Warcraft Guild</title>
+<meta name="description" content="The Great British Warcraft Guild – a friendly British Alliance guild on WoW Forever.">
+<link rel="icon" href="logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <a class="brand" href="#news" aria-label="Home"><img src="logo.webp" alt="The Great British Warcraft Guild" width="513" height="520"></a>
+    <p class="tag"><b>Alliance</b> · WoW Forever</p>
+    <nav id="nav">
+      <a href="#news" data-tab="news"><svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg>News</a>
+      <a href="#roster" data-tab="roster"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Roster</a>
+      <a href="#events" data-tab="events"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Events<span class="badge" id="evBadge" hidden></span></a>
+      <a href="#map" data-tab="map"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Guild Map</a>
+      <a href="#apply" data-tab="apply" id="navApply"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>Apply to Join</a>
+      <a href="#officers" data-tab="officers" id="navOfficers" hidden><svg viewBox="0 0 24 24"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zM5 20h14"/></svg>Officers<span class="badge" id="appBadge" hidden></span></a>
+    </nav>
+    <div class="userbox" id="userbox"></div>
+  </aside>
+  <div class="scrim" id="scrim" data-act="closeMenu"></div>
+
+  <main>
+    <div class="topbar">
+      <button class="iconbtn" data-act="openMenu" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <img src="logo.webp" alt="" width="40" height="40">
+      <span>The Great British Warcraft Guild</span>
+    </div>
+    <div id="banner" class="banner" hidden></div>
+    <section class="tab" id="tab-news"></section>
+    <section class="tab" id="tab-roster" hidden></section>
+    <section class="tab" id="tab-events" hidden></section>
+    <section class="tab" id="tab-map" hidden></section>
+    <section class="tab" id="tab-apply" hidden></section>
+    <section class="tab" id="tab-officers" hidden></section>
+    <footer>For the Alliance! · The Great British Warcraft Guild · Better bakes than wipes</footer>
+  </main>
+</div>
+
+<dialog id="modal"></dialog>
+<dialog id="confirm" class="small"></dialog>
+<dialog id="lightbox"></dialog>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
